@@ -80,7 +80,7 @@ header a {
 
 .footer {
     background-color: #C5B68E; 
-    color: #000;
+    color: #000; 
     padding: 20px 10px;
     display: flex;
     justify-content: space-between;
@@ -106,6 +106,13 @@ header a {
     margin-bottom: 8px;
     font-size: 0.9em;
     margin: 30px;
+}
+
+.footer-logo {
+    font-weight: bold; 
+    text-align: center; 
+    margin: 70px 0; 
+    color: #000; 
 }
 
 .footer-column a:hover {
