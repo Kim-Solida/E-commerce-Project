@@ -119,18 +119,52 @@ header a {
     outline: none;
 }
 
-button {
-    background-color: #a5844b;
-    color: black;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    padding-bottom: 15px;
+}
+
+
+.form-group label {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #333;
+    margin: 10px;
+}
+
+.form-group input {
+    width: 100%;
     border: none;
-    padding: 10px 20px;
+    border-bottom: 2px solid #a5844b;
+    outline: none;
+    font-size: 16px;
+    padding: 5px 0;
+    background: transparent;
+}
+
+.form-group input:focus {
+    border-bottom: 2px solid #8d6e4d; /* Slight color change on focus */
+}
+
+.submit {
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #a5844b;
+    border: 1px solid #a5844b;
+    padding: 25px 100px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 30px;
+    display: block;
+    margin: 100px auto ; 
 }
 
 .footer {
-    background-color: #C5B68E; /* Match your background color */
-    color: #000; /* Ensure text is readable */
+    background-color: #C5B68E; 
+    color: #000; 
     padding: 20px 10px;
     display: flex;
     justify-content: space-between;
@@ -156,6 +190,13 @@ button {
     margin-bottom: 8px;
     font-size: 0.9em;
     margin: 30px;
+}
+
+.footer-logo {
+    font-weight: bold; 
+    text-align: center; 
+    margin: 70px 0; 
+    color: #000; 
 }
 
 .footer-column a:hover {
