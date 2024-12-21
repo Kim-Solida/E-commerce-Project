@@ -1,9 +1,11 @@
+/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
 }
 
+/* Header */
 header {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
@@ -13,6 +15,13 @@ header {
     padding: 10px 20px;
 }
 
+header a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 15px;
+}
+
+/* Navigation Bar */
 nav {
     background-color: #a5844b;
     border-bottom: 1px solid #ddd;
@@ -22,24 +31,20 @@ nav {
     padding: 10px 20px;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: white;
     margin: 0 15px;
 }
 
-header a {
-    text-decoration: none;
-    color: #000;
-    margin: 0 15px;
-}
-
+/* Search Bar */
 .search-bar {
     border: 1px solid #ccc;
     padding: 5px;
     border-radius: 15px;
 }
 
+/* Hero Section */
 .hero {
     text-align: center;
     background: url(photo.avif) no-repeat center/cover;
@@ -66,102 +71,82 @@ header a {
     border-radius: 5px;
 }
 
-.get-in-touch {
+/* Main Content Sections */
+.get-in-touch,.service {
     text-align: center;
-}
-
-.service {
-    text-align: center;
-    
 }
 
 .about {
-    display: flex; 
-    justify-content: space-between; 
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
     margin: 40px;
     text-align: center;
 }
 
 .Inquiries {
-    display: grid; 
+    display: grid;
     padding: 20px;
     margin: 40px;
     text-align: center;
 }
 
+/* Form Styling */
 .main-user-info {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Ensure elements stay on one line */
     justify-content: space-between;
+    gap: 20px; /* Adds spacing between items */
     padding: 20px 0;
 }
 
-.name {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    padding-bottom: 15px;
-}
-
-.name label {
-    width: 95%;
-    font-size: 20px;
-    font-weight: 400;
-    margin: 10px;
-}
-
-.name input{
-    width: 95%;
-    margin: 10px;
-    border: none;
-    border-bottom: 2px solid #a5844b;
-    outline: none;
-}
-
-.form-group {
+.name, .form-group {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 10px;
-    padding-bottom: 15px;
+    margin: 0 10px;
 }
 
-
-.form-group label {
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 8px;
-    color: #333;
-    margin: 10px;
+.name {
+    flex: 1; 
+    position: relative;
 }
 
-.form-group input {
+.name label, .form-group label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.name input, .form-group input {
     width: 100%;
     border: none;
     border-bottom: 2px solid #a5844b;
     outline: none;
-    font-size: 16px;
     padding: 5px 0;
     background: transparent;
 }
 
-.form-group input:focus {
-    border-bottom: 2px solid #8d6e4d; /* Slight color change on focus */
+.name input {
+    width: 108%;
 }
 
 .submit {
     font-size: 20px;
     background-color: #ffffff;
     color: #a5844b;
-    border: 1px solid #a5844b;
+    border: 2px solid #a5844b;
     padding: 25px 100px;
     cursor: pointer;
     border-radius: 30px;
     display: block;
-    margin: 100px auto ; 
+    margin: 100px auto; 
 }
 
+.submit a {
+    text-decoration: none;
+    color: #a5844b;
+}
+
+/* Footer */
 .footer {
     background-color: #C5B68E; 
     color: #000; 
@@ -179,8 +164,6 @@ header a {
     font-size: 1.5em;
     margin-bottom: 10px;
     font-weight: bold;
-    display: grid;
-    grid-column: 1 / 2;
 }
 
 .footer-column a {
@@ -203,9 +186,21 @@ header a {
     text-decoration: underline;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-user-info {
+        flex-wrap: wrap; /* Stack elements on smaller screens */
+    }
+
+    .name, .form-group {
+        margin-bottom: 20px;
+        width: 100%; /* Full width on small screens */
+    }
+}
+
 @media (max-width: 568px) {
     body {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
     }
-  }
+}
