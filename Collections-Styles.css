@@ -79,7 +79,6 @@ header a {
     color: #6C6060;
 }
 
-/* Style for the product image link */
 .product-link img {
     width: 100%;
     height: auto;
@@ -90,17 +89,6 @@ header a {
 .product-link img:hover {
     transform: scale(1.1);
 }
-
-/* Cart icon when item is clicked (a visual indicator for "added to cart") */
-.product-link:active img::after {
-    content: "✔";
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 24px;
-    color: green;
-}
-
 
 .footer {
     background-color: #C5B68E; 
