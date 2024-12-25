@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dior E-Commerce</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <div class="account-container">
+        <h1>Create Account</h1>
+        <form id="create-account-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            </div>
+            <button type="submit" class="form-submit">Create Account</button>
+        </form>
+        <a href="login.html" class="login-link">Already have an account? Log in</a>
+    </div>
+
+    <script>
+        document.getElementById('create-account-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get values from form inputs
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+
+            // Save to localStorage
+            localStorage.setItem('username', username);
+            localStorage.setItem('email', email);
+
+            // Redirect to Home page
+            window.location.href = 'Home.html';
+        });
+    </script>
+</body>
+</html>

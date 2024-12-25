@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Dior E-Commerce</title>
+    <link rel="stylesheet" href="item-style.css">
+</head>
+<body>
+
+    <section class="product-details">
+        <div class="product-container">
+            <img id="product-image" alt="Product Image" class="product-img">
+            <div class="details">
+                <h2 id="product-name"></h2>
+                <p class="price" id="product-price"></p>
+                <p class="description" id="product-description"></p>
+                <button class="b1">
+                    <a href="cart.html">Add to cart</a>
+                </button>
+                <button class="b2">
+                    <a href="cart.html">Buy now</a>
+                </button>
+                <button class="b3">
+                    <a href="Collections.html">Back to Collections</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const products = [
+            { id: 1, name: "Small Dior Toujours Vertical Tote Bag", price: "$6000", description: "A luxurious tote bag made with high-quality leather.", image: "Small Dior Toujours Vertical Tote Bag.webp" },
+            { id: 2, name: "Medium Lady Dior Bag", price: "$6800", description: "An elegant medium-sized bag for every occasion.", image: "Medium Lady Dior Bag.webp" },
+            { id: 3, name: "Medium Dior Toujours Bag", price: "$4000", description: "A versatile medium-sized Dior bag with timeless appeal.", image: "Medium Dior Toujours Bag.webp" },
+            { id: 4, name: "Small Lady D-Joy Bag", price: "$4200", description: "A chic small bag with a refined design, perfect for everyday use.", image: "Medium Lady D-Joy Bag.webp" },
+            { id: 5, name: "Saddle Bag with Strap", price: "$4000", description: "A classic saddle bag with a stylish adjustable strap.", image: "Saddle Bag with Strap.webp" },
+            { id: 6, name: "Medium Dior Caro Backpack", price: "$4200", description: "A modern and functional backpack with luxurious appeal.", image: "Medium Dior Caro Backpack.webp" },
+            { id: 7, name: "Medium Lady D-Lite Bag", price: "$6400", description: "A sophisticated medium-sized bag from Dior with a signature design.", image: "Medium Lady D-Lite Bag.webp" },
+            { id: 8, name: "My Dior Top Handle Bag", price: "$4500", description: "A luxurious top handle bag for the modern woman.", image: "My Dior Top Handle Bag.webp" },
+            { id: 9, name: "Dior Bobby East-West Bag", price: "$3800", description: "A spacious and stylish east-west bag for a chic look.", image: "Dior Bobby East-West Bag.webp" },
+            { id: 10, name: "Medium Dior Toujours Bag", price: "$4500", description: "A versatile medium bag with the Dior signature style.", image: "Medium Dior Toujours Bag 1.webp" },
+            { id: 11, name: "Dior Groove 20 Bag", price: "$3800", description: "A stylish 20cm bag with Dior's unique groove design.", image: "Dior Groove 20 Bag.webp" },
+            { id: 12, name: "Medium Lady D-Lite Bag", price: "$5500", description: "A refined medium-sized bag that complements any outfit.", image: "Medium Lady D-Lite Bag 1.webp" },
+            { id: 13, name: "Small Lady D-Joy Bag", price: "$5000", description: "A small and elegant bag that adds sophistication to any look.", image: "Small Lady D-Joy Bag.webp" },
+            { id: 14, name: "Dior Travel Backpack", price: "$3500", description: "A spacious backpack for both travel and daily use, featuring Dior's iconic style.", image: "DiorTravel Backpack.webp" },
+            { id: 15, name: "Medium Dior Bobby Bag", price: "$5800", description: "New for Cruise 2025, the Dior Bobby bag offers a new take on the hobo silhouette with sophisticated lines and harmonious proportions.", image: "Medium Dior Bobby Bag.webp" },
+            { id: 16, name: "Small Dior Jolie Top Handle Bag", price: "$5200", description: "The Dior Jolie Top Handle Bag presents an elegant and functional design.", image: "Small Dior Jolie Top Handle Bag.webp" },
+            { id: 17, name: "Medium Dior Book Tote", price: "$4800", description: "The Dior Book Tote is a classic and original design by Maria Grazia Chiuri.", image: "Medium Dior Book Tote.webp" },
+            { id: 18, name: "Medium Dior Travel Nomad Pouch", price: "$3200", description: "Maria Grazia Chiuri's Travel Nomad pouch is a modern hybrid design.", image: "Medium Dior Travel Pouch.webp" },
+            { id: 19, name: "Dior Jolie Dahlia Wallet", price: "$1500", description: "New for Cruise 2024, the Dior Jolie Dahlia wallet is an elegant essential.", image: "Dior Jolie Dahlia Wallet.webp" }
+        ];
+
+
+        // Get the product ID from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = parseInt(urlParams.get('id'));
+
+        // Find the product from the array
+        const product = products.find(p => p.id === productId);
+
+        // Display the product details on the page
+        if (product) {
+            document.getElementById('product-image').src = product.image;
+            document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-price').textContent = product.price;
+            document.getElementById('product-description').textContent = product.description;
+        } else {
+            document.body.innerHTML = "<h1>Product Not Found</h1>";
+        }
+    </script>
+
+</body>
+</html>
